@@ -14,7 +14,7 @@ const Purchase = () => {
     console.log(name)
 
     useEffect(() => {
-        fetch(`http://localhost:5000/products/${id}`)
+        fetch(`https://fast-caverns-34943.herokuapp.com/products/${id}`)
 
             .then(res => res.json())
             .then(data => setBooking(data));

@@ -20,7 +20,7 @@ const Order = ({ handleClose, show, booking }) => {
         handleClose();
 
         // e.preventDefault();
-        axios.post('http://localhost:5000/orders', data)
+        axios.post('https://fast-caverns-34943.herokuapp.com/orders', data)
             .then(res => {
                 console.log(res)
                 reset();

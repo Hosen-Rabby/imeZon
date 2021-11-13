@@ -8,7 +8,7 @@ const CheckOrder = () => {
     console.log(orders);
     const count = orders.length;
     useEffect(() => {
-        const uri = 'http://localhost:5000/orders'
+        const uri = 'https://fast-caverns-34943.herokuapp.com/orders'
         fetch(uri)
             .then(res => res.json())
             .then(data => setOrders(data))

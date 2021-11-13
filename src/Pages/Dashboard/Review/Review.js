@@ -11,7 +11,7 @@ const Review = () => {
     const onSubmit = data => {
         console.log(data);
 
-        axios.post('http://localhost:5000/reviews', data)
+        axios.post('https://fast-caverns-34943.herokuapp.com/reviews', data)
             .then(res => {
                 console.log(res)
                 reset();

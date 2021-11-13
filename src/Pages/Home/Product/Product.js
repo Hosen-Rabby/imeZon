@@ -7,7 +7,7 @@ const Product = () => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        const uri = 'http://localhost:5000/products'
+        const uri = 'https://fast-caverns-34943.herokuapp.com/products'
         fetch(uri)
             .then(res => res.json())
             .then(data => setProducts(data))
