@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import Products from './Products';
+import css from '../../../style/style.css'
 
 const Product = () => {
 
@@ -14,10 +15,10 @@ const Product = () => {
     }, [])
 
     return (
-        <Container>
+        <Container id='watches'>
             <Row>
                 <Col lg={12}>
-                    <h3>Discover Our Collection</h3>
+                    <h3>Discover Our Collections</h3>
                 </Col>
             </Row>
             <Row>

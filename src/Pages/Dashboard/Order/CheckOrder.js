@@ -1,5 +1,6 @@
 import React,{useState, useEffect} from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
+import css from '../../../style/style.css'
 
 
 const CheckOrder = () => {
@@ -15,7 +16,7 @@ const CheckOrder = () => {
     }, [])
 
     return (
-        <div>
+        <div className='check_order'>
             <Container>
                 <Row>
                     <h4>You have ordered {count} items</h4>

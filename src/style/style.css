@@ -30,6 +30,8 @@
     margin: 0 6px;
     font-weight: 500;
     transition: .3s;
+    text-decoration: none;
+    color: #000;
 }
 
 .menu .top_btn:hover{
@@ -38,6 +40,11 @@
 }
 
 /* navbar end */
+
+/* explore */
+.explore{
+    padding-top: 120px;
+}
 
 /* product start */
 
@@ -53,6 +60,14 @@
     margin-top: 20px;
 }
 
+.explore .product_btn{
+    background: #000;
+    color: #fff;
+    border-radius: 0;
+    padding: 10px 30px;
+    margin-top: 20px;
+}
+
 .product_info .product_btn:hover{
     color: chocolate;
 }
@@ -60,6 +75,17 @@
 
 /* product end */
 
+
+/* purchase */
+.long{
+    margin-top: 50px;
+}
+.purchase{
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    padding-top: 15px;
+}
 /* about start */
 .about{
     background:rgb(247, 247, 247);
@@ -135,29 +161,44 @@
 
 .dashboard{
     text-align: left;
-    /* background: rgb(19, 18, 18); */
+    background: rgba(247, 247, 247, 0.946);
     min-height: 100vh;
+    /* padding-top: 100px; */
 }
 
 
 .dashboard_items{
     display: flex;
     flex-direction: column;
-    background: rgb(14, 2, 32);
+    background: rgb(235, 235, 235);
     width: 100%;
-    height: 100vh;
+    min-height: 100%;
+    padding-top: 120px;
 }
 
 .dashboard_items button{
-    color:#fff;
+    color:#000;
     background: transparent;
     width: 100%;
     border: 1px solid #fff;
     margin: 10px 0;
+    padding: 15px 20px;
 }
 
 
 /* dashboard end */
+
+/* admin */
+.admin{
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+.admin Form{
+    width: 100%;
+}
+
 
 
 /* review start */
@@ -194,6 +235,7 @@
     min-height: 100vh;
     display: flex;
     align-items: center;
+    padding-top: 120px;
 }
 
 .add_product form input{
@@ -205,11 +247,47 @@
 
 /* add product end */
 
+/* check_order */
+.check_order{
+    display: flex;
+    align-items: center;
+    padding-top: 150px;
+}
+
+.check_order h4{
+    
+    color: chocolate;
+}
+
+/* watches start */
+#watches{
+    padding: 100px 0;
+}
+/* watches end */
+
+
+/* review */
+
+.reviews_post{
+    padding: 100px 0;
+    background: rgb(252, 247, 247);
+}
+
+.clients{
+    margin-bottom: 40px;
+}
+
+.client_reviews{
+    border: 1px solid rgb(63, 62, 62);
+    margin-bottom: 20px;
+}
+
 /* pay start */
 .pay{
     display: flex;
     align-items: center;
     color: chocolate;
+    padding-top: 180px;
 }
 /* pay end */
 

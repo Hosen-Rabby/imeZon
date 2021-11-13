@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Form } from 'react-bootstrap';
 import useAuth from '../../../hooks/useAuth';
+import css from '../../../style/style.css'
 
 const MakeAdmin = () => {
     const [email, setEmail] = useState('');
@@ -33,12 +34,12 @@ const MakeAdmin = () => {
         e.preventDefault()
     }
     return (
-        <div>
+        <div className='admin'>
             <Form onSubmit={handleAdminSubmit}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Control type="email" onBlur={handleOnBlur} name='email' placeholder="Enter email" />
+                    <Form.Control type="email" onBlur={handleOnBlur} name='email' placeholder="Enter email" className='admin_inp'/>
                 </Form.Group>
-                <button variant="primary" type="submit">
+                <button variant="primary" type="submit" className='post'>
                     Make Admin
                 </button>
             </Form>

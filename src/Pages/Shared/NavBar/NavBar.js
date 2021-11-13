@@ -14,7 +14,7 @@ const NavBar = () => {
             <Navbar collapseOnSelect expand="lg">
                 <Container>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-                    <Navbar.Brand href="/" className='d-md-none d-lg-block'>IemZon</Navbar.Brand>
+                    {/* <Navbar.Brand href="/" className='d-md-none d-lg-block'>IemZon</Navbar.Brand> */}
 
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav>
@@ -24,9 +24,11 @@ const NavBar = () => {
 
                         </Nav>
                         <Nav className="m-auto">
-                            <Nav.Link href="/home">Features</Nav.Link>
+                            <Nav.Link href="/home">Home</Nav.Link>
+                            <Nav.Link href="/home/#about">About</Nav.Link>
                             <Navbar.Brand href="/" className = 'menu_logo'>IemZon</Navbar.Brand>
-                            <Nav.Link href="#pricing">Pricing</Nav.Link>
+                            <Nav.Link href="/home/#watches">Watches</Nav.Link>
+                            <Nav.Link href="/home/#clients">Reviews</Nav.Link>
                         </Nav>
                         <Nav>
                             {
@@ -39,7 +41,7 @@ const NavBar = () => {
                                         </NavLink>
                                     </>
                                     :
-                                    <NavLink to='/login'>Login</NavLink>
+                                    <NavLink to='/login' className='top_btn'>Login</NavLink>
                             }
                         </Nav>
                     </Navbar.Collapse>

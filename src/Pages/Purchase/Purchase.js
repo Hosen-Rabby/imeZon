@@ -1,14 +1,17 @@
 import Button from '@restart/ui/esm/Button';
 import React, { useState, useEffect } from 'react';
 import { useParams } from "react-router-dom";
-import Order from '../Explore/Order';
+import { Col, Container, Row } from 'react-bootstrap';
 
+import Order from '../Explore/Order';
+import NavBar from '../Shared/NavBar/NavBar';
+import css from '../../style/style.css'
 
 const Purchase = () => {
-    
+
 
     const { id } = useParams();
-    
+
     const [booking, setBooking] = useState({});
     const { name, img, img2, district, longDes } = booking;
     console.log(name)
@@ -28,18 +31,40 @@ const Purchase = () => {
     const handleShow = () => setShow(true);
 
     return (
-        <div>
-            {name}
-            
-            <Button variant="primary" onClick={handleShow}>
-                Place Order
-            </Button>
-            <Order
-            booking = {booking}
-            handleClose={handleClose}
-            show={show}
-            ></Order>
-        </div>
+        <>
+            <NavBar></NavBar>
+            <div className='purchase'>
+                <Container>
+                    <Row>
+                        <Col lg={12}>
+                            <h3>Product name: {name}</h3>
+
+                            <Button variant="primary" onClick={handleShow} className='post'>
+                                Place Order
+                            </Button>
+                            <Order
+                                booking={booking}
+                                handleClose={handleClose}
+                                show={show}
+                            ></Order>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col lg={4}>
+                            <img src={img} className='img-fluid' />
+                        </Col>
+                        <Col lg={8}>
+                            <div className='long'>
+
+                                <h6>{longDes}</h6>
+                            </div>
+
+                        </Col>
+
+                    </Row>
+                </Container>
+            </div>
+        </>
     );
 };
 

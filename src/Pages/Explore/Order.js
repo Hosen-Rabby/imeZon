@@ -16,7 +16,7 @@ const Order = ({ handleClose, show, booking }) => {
 
     const handleOrderSubmit =  data => {
         console.log(data);
-        alert('k')
+        alert('Successfully placed order')
         handleClose();
 
         // e.preventDefault();
@@ -41,8 +41,6 @@ const Order = ({ handleClose, show, booking }) => {
                         <input {...register("address", { required: true })} placeholder='Address' />
                         <input {...register("phone", { required: true })} placeholder='Phone' />
                         <input {...register("price", { required: true, disabled: false })} placeholder={price} />
-                        {/* <input type="submit" className='post' /> */}
-                        {/* <button type='submit'>Order</button> */}
                         <input type="submit" className='post'/>
 
                     </form>

@@ -5,7 +5,7 @@ import about from '../../../img/img-1.jpg'
 
 const About = () => {
     return (
-        <div className='about'>
+        <div id='about' className='about'>
             <Container>
                 <Row>
                     <Col lg={6} className='about_left'>

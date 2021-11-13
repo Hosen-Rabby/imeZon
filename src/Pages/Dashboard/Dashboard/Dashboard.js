@@ -19,7 +19,7 @@ const Dashboard = () => {
     const { admin } = useAuth();
     return (
         <div className='dashboard'>
-            {/* <NavBar /> */}
+            <NavBar />
             <Container>
                 <Row>
                         <Col md={3} className='dashboard_items'>

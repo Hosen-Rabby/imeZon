@@ -10,6 +10,7 @@ import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
 import Purchase from './Pages/Purchase/Purchase';
 import Dashboard from './Pages/Dashboard/Dashboard/Dashboard';
 import Footer from './Pages/Shared/NavBar/Footer/Footer';
+import NotFound from './Pages/NotFournd/NotFound';
 
 function App() {
   return (
@@ -38,6 +39,11 @@ function App() {
             <PrivateRoute path='/products/:id'>
               <Purchase></Purchase>
             </PrivateRoute>
+            
+       
+            <Route path='*'>
+              <NotFound></NotFound>
+            </Route>
           </Switch>
           <Footer></Footer>
         </BrowserRouter>

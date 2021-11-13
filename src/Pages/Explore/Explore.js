@@ -3,6 +3,7 @@ import { Col, Container, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import NavBar from '../Shared/NavBar/NavBar';
 import { useParams } from "react-router-dom";
+import css from '../../style/style.css'
 
 
 const Explore = () => {
@@ -22,27 +23,30 @@ const Explore = () => {
     return (
         <>
             <NavBar></NavBar>
-            <Container>
-                <Row>
-                    {
-                        products.map(product =>
-                            <Col lg={4} md={6} key={product._id}>
-                                <div className='product_item'>
-                                    <div className='product_img'>
-                                        <img src={product.img} className='img-fluid'></img>
+
+            <div className='explore'>
+                <Container>
+                    <Row>
+                        {
+                            products.map(product =>
+                                <Col lg={4} md={6} key={product._id}>
+                                    <div className='product_item'>
+                                        <div className='product_img'>
+                                            <img src={product.img} className='img-fluid'></img>
+                                        </div>
+                                        <h2>{product.name}</h2>
+                                        <p>{product.shortDes}</p>
+                                        <h4>$ {product.price}</h4>
+                                        <Link to={`/products/${product._id}`}>
+                                            <button className="product_btn">Buy Now</button>
+                                        </Link>
                                     </div>
-                                    <h2>{product.name}</h2>
-                                    <p>{product.shortDes}</p>
-                                    <h6>{product.price} Tk.  <span>Per person</span></h6>
-                                    <Link to={`/products/${product._id}`}>
-                                        <button className="btn product_btn">Buy Now</button>
-                                    </Link>
-                                </div>
-                            </Col>
-                        )
-                    }
-                </Row>
-            </Container>
+                                </Col>
+                            )
+                        }
+                    </Row>
+                </Container>
+            </div>
         </>
     );
 };
