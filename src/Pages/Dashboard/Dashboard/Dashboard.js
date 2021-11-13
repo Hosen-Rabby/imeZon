@@ -22,7 +22,6 @@ const Dashboard = () => {
             {/* <NavBar /> */}
             <Container>
                 <Row>
-                    {/* <div className='dashboard'> */}
                         <Col md={3} className='dashboard_items'>
                             {admin &&
                                 <>
