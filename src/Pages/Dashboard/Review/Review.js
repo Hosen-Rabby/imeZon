@@ -2,6 +2,7 @@ import axios from 'axios';
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { useForm } from "react-hook-form";
+import css from '../../../style/style.css'
 
 
 const Review = () => {
@@ -11,23 +12,24 @@ const Review = () => {
         console.log(data);
 
         axios.post('http://localhost:5000/reviews', data)
-        .then(res =>{
-            console.log(res)
-            reset();
+            .then(res => {
+                console.log(res)
+                reset();
 
-        })
+            })
     }
 
     return (
-        <div>
-            <h2>Post review</h2>
+        <div className='reviews'>
             <Container>
                 <Row>
-                    <Col lg={6}>
+                    <Col lg={12}>
+                        <h2>Post review</h2>
                         <form onSubmit={handleSubmit(onSubmit)}>
-                            <input {...register("name", {required:true})} placeholder='Name' />
-                            <input {...register("review", {required:true})} placeholder='Post review' />
-                            <input type="submit" />
+                            <input {...register("name", { required: true })} placeholder='Name' />
+                            <input {...register("review", { required: true })} placeholder='Post review' />
+                            <input {...register("star", { required: true })} placeholder='Give rating in 5' />
+                            <input type="submit" className='post'/>
                         </form>
                     </Col>
                 </Row>

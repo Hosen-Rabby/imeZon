@@ -9,6 +9,7 @@ import Explore from './Pages/Explore/Explore';
 import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
 import Purchase from './Pages/Purchase/Purchase';
 import Dashboard from './Pages/Dashboard/Dashboard/Dashboard';
+import Footer from './Pages/Shared/NavBar/Footer/Footer';
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
               <Purchase></Purchase>
             </PrivateRoute>
           </Switch>
+          <Footer></Footer>
         </BrowserRouter>
       </AuthProvider>
     </div>

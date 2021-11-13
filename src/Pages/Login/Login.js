@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { Container, Form, Row } from 'react-bootstrap';
+import { Container, Form, Row, Col} from 'react-bootstrap';
 import { useHistory, useLocation } from 'react-router';
 import useAuth from '../../hooks/useAuth';
-
 import { NavLink } from 'react-router-dom';
 import NavBar from '../Shared/NavBar/NavBar';
+import css from '../../style/style.css'
 
 const Login = () => {
 
@@ -32,30 +32,36 @@ const Login = () => {
 
 
     return (
-        <div>
+        <>
             <NavBar></NavBar>
-            <Container>
-                <Row>
-                    <h3>Please Login</h3>
-                    <Form onSubmit={handleLoginSubmit}>
-                        <Form.Group className="mb-3" controlId="formBasicEmail">
-                            <Form.Control type="email" name='email' onBlur={handleOnBlur} placeholder="Enter email" />
-                        </Form.Group>
-                        <Form.Group className="mb-3" controlId="formBasicPassword">
-                            <Form.Control type="password" name='password' onBlur={handleOnBlur} placeholder="Password" />
-                        </Form.Group>
-                        <button variant="primary" type="submit">
-                            Login
-                        </button>
-                    </Form>
-                </Row>
 
-                <Row>
-                    <h4>Didn't registered yet!</h4>
-                    <NavLink to='/register'>Register</NavLink>
-                </Row>
-            </Container>
-        </div>
+            <div className='login'>
+                <Container>
+                    <Row>
+                        <Col lg={3}></Col>
+                        <Col lg={6}>
+                            <h3>Please Login</h3>
+                            <Form onSubmit={handleLoginSubmit}>
+                                <Form.Group className="mb-3" controlId="formBasicEmail">
+                                    <Form.Control type="email" name='email' onBlur={handleOnBlur} placeholder="Enter email" />
+                                </Form.Group>
+                                <Form.Group className="mb-3" controlId="formBasicPassword">
+                                    <Form.Control type="password" name='password' onBlur={handleOnBlur} placeholder="Password" />
+                                </Form.Group>
+                                <button variant="primary" type="submit" className='log'>
+                                    Login
+                                </button>
+                            </Form>
+                            <h3>Didn't registered yet!</h3>
+                            <NavLink to='/register'>
+                                <button className='log'>Register</button>
+                            </NavLink>
+                        </Col>
+                    </Row>
+                </Container>
+            </div>
+
+        </>
     );
 };
 

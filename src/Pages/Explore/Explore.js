@@ -6,11 +6,10 @@ import { useParams } from "react-router-dom";
 
 
 const Explore = () => {
-    // const { id } = useParams();
-    // const [singles, setSingles] = useState({});
 
     const [products, setProducts] = useState([]);
     console.log(products);
+    
     useEffect(() => {
         const uri = 'http://localhost:5000/products'
         fetch(uri)
@@ -18,12 +17,6 @@ const Explore = () => {
             .then(data => setProducts(data))
     }, [])
 
-    // useEffect(() => {
-    //     const uri = `http://localhost:5000/products/${id}`
-    //     fetch(uri)
-    //         .then(res => res.json())
-    //         .then(data => setProducts(data))
-    // }, [])
 
 
     return (
