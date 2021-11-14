@@ -15,7 +15,6 @@ const Review = () => {
             .then(res => {
                 console.log(res)
                 reset();
-
             })
     }
 
@@ -27,6 +26,7 @@ const Review = () => {
                         <h2>Post review</h2>
                         <form onSubmit={handleSubmit(onSubmit)}>
                             <input {...register("name", { required: true })} placeholder='Name' />
+                            <input {...register("email", { required: true })} placeholder='Email' />
                             <input {...register("review", { required: true })} placeholder='Post review' />
                             <input {...register("star", { required: true })} placeholder='Give rating in 5' />
                             <input type="submit" className='post'/>

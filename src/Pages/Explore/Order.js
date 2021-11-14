@@ -36,11 +36,13 @@ const Order = ({ handleClose, show, booking }) => {
                 </Modal.Header>
                 <Modal.Body>
                     <form onSubmit={handleSubmit(handleOrderSubmit)}>
+                        <input {...register("proname", { required: true })} placeholder={name} />
                         <input {...register("name", { required: true })} placeholder='Your Name' />
                         <input {...register("email", { required: true , disabled: false})} placeholder={user.email} />
                         <input {...register("address", { required: true })} placeholder='Address' />
                         <input {...register("phone", { required: true })} placeholder='Phone' />
-                        <input {...register("price", { required: true, disabled: false })} placeholder={price} />
+                        <input {...register("price", { required: true, disabled: false })} placeholder={`Price $${price}`} />
+                        
                         <input type="submit" className='post'/>
 
                     </form>

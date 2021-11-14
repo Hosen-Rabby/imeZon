@@ -30,17 +30,15 @@ function App() {
             <Route path='/register'>
               <Register></Register>
             </Route>
-            <Route path='/dashboard'>
+            <PrivateRoute path='/dashboard'>
               <Dashboard></Dashboard>
-            </Route>
+            </PrivateRoute>
             <Route path='/explore'>
               <Explore></Explore>
             </Route>
             <PrivateRoute path='/products/:id'>
               <Purchase></Purchase>
-            </PrivateRoute>
-            
-       
+            </PrivateRoute>          
             <Route path='*'>
               <NotFound></NotFound>
             </Route>

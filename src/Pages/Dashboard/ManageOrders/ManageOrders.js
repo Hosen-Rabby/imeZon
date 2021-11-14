@@ -1,18 +1,15 @@
 import React,{useState, useEffect} from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
-import useAuth from '../../../hooks/useAuth';
 import css from '../../../style/style.css'
 
 
-const CheckOrder = () => {
-
-    const{user}= useAuth();
+const ManageOrders = () => {
 
     const [orders, setOrders] = useState([])
     console.log(orders);
     const count = orders.length;
     useEffect(() => {
-        const uri = `https://fast-caverns-34943.herokuapp.com/orders?email=${user.email}`
+        const uri = 'https://fast-caverns-34943.herokuapp.com/orders'
         fetch(uri)
             .then(res => res.json())
             .then(data => setOrders(data))
@@ -22,14 +19,15 @@ const CheckOrder = () => {
         <div className='check_order'>
             <Container>
                 <Row>
-                    <h4>You have ordered {count} items</h4>
+                    <h4>There are {count} orders</h4>
                 </Row>
                 <Row>
                     {
                         orders.map(order =>
                             <Col lg={8}>
                                 <div className='order_items'>
-                                   {order.price}
+                                    <h5>{order.proname}</h5>
+                                   <p>Price: {order.price}</p>
                                 </div>
                             </Col>
                         )
@@ -40,4 +38,4 @@ const CheckOrder = () => {
     );
 };
 
-export default CheckOrder;
+export default ManageOrders;

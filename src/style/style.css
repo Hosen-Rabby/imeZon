@@ -44,6 +44,10 @@
 /* explore */
 .explore{
     padding-top: 120px;
+    padding-bottom: 100px;
+}
+.explore .product_item{
+    margin: 20px 0;
 }
 
 /* product start */
@@ -278,8 +282,17 @@
 }
 
 .client_reviews{
-    border: 1px solid rgb(63, 62, 62);
     margin-bottom: 20px;
+    box-shadow: 4px 4px 9px -3px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 4px 4px 9px -3px rgba(0,0,0,0.75);
+    -moz-box-shadow: 4px 4px 9px -3px rgba(0,0,0,0.75);
+    padding: 20px;
+    margin-top: 30px;
+    text-align: left;
+}
+
+.client_reviews h3{
+    color: chocolate;
 }
 
 /* pay start */
@@ -290,6 +303,18 @@
     padding-top: 180px;
 }
 /* pay end */
+
+.order_items{
+    box-shadow: 4px 4px 9px -3px rgba(0,0,0,0.75);
+-webkit-box-shadow: 4px 4px 9px -3px rgba(0,0,0,0.75);
+-moz-box-shadow: 4px 4px 9px -3px rgba(0,0,0,0.75);
+padding: 20px;
+margin-top: 30px;
+}
+
+.order_items h3{
+    color:chocolate;
+}
 
 /* footer start */
 
@@ -313,4 +338,6 @@
 .footer p:hover{
     color: chocolate;
 }
+
+
 /* footer end */
