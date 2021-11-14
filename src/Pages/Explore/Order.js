@@ -4,6 +4,8 @@ import { Modal, Button } from 'react-bootstrap';
 import axios from 'axios';
 import useAuth from '../../hooks/useAuth';
 
+import css from '../../style/style.css'
+
 
 
 
@@ -28,7 +30,7 @@ const Order = ({ handleClose, show, booking }) => {
     }
 
     return (
-        <div>
+        <div className='order_modal'>
 
             <Modal show={show} onHide={handleClose} animation={false}>
                 <Modal.Header closeButton>

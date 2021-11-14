@@ -37,7 +37,7 @@ const Purchase = () => {
                 <Container>
                     <Row>
                         <Col lg={12}>
-                            <h3>Product name: {name}</h3>
+                            <h3>{name}</h3>
 
                             <Button variant="primary" onClick={handleShow} className='post'>
                                 Place Order
@@ -55,7 +55,6 @@ const Purchase = () => {
                         </Col>
                         <Col lg={8}>
                             <div className='long'>
-
                                 <h6>{longDes}</h6>
                             </div>
 

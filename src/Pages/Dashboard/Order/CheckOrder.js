@@ -28,10 +28,11 @@ const CheckOrder = () => {
                     {
                         orders.map(order =>
                             <Col lg={8}>
-                                <div className='order_items'>
-                                   {order.price}
-                                </div>
-                            </Col>
+                            <div className='order_items'>
+                                <h5>{order.proname}</h5>
+                               <p>Price: {order.price}</p>
+                            </div>
+                        </Col>
                         )
                     }
                 </Row>
