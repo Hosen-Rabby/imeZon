@@ -26,14 +26,14 @@ const Reviews = () => {
                         <>
 
 
-                                <Col md={6}>
-                            <div className='client_reviews'>
+                            <Col md={6}>
+                                <div className='client_reviews'>
 
                                     <h3>{review.name}</h3>
                                     <p>{review.review}</p>
-                            </div>
+                                </div>
 
-                                </Col>
+                            </Col>
 
 
 
