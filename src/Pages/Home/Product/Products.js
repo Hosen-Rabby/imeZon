@@ -11,7 +11,7 @@ const Products = (props) => {
     const { _id, name, img, shortDes, price } = props.product;
     return (
         // <div className='products'>
-        <Col lg={4}>
+        <Col lg={4} md={6}>
             <div className='product'>
                 <div className='product_img'>
                     <img src={img} className='img-fluid' />

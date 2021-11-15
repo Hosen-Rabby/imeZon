@@ -12,7 +12,7 @@ const CheckOrder = () => {
     console.log(orders);
     const count = orders.length;
     useEffect(() => {
-        const uri = `https://fast-caverns-34943.herokuapp.com/orders?email=${user.email}`
+        const uri = `https://fast-caverns-34943.herokuapp.com/myorders?email=${user.email}`
         fetch(uri)
             .then(res => res.json())
             .then(data => setOrders(data))
